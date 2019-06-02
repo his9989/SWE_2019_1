@@ -1,4 +1,5 @@
 #include "SearchRegisteredTicketUI.h"
+#include "memberManagement.h"
 
 SearchRegisteredTicketUI* SearchRegisteredTicketUI::searchRegisteredTicketUIinst;
 

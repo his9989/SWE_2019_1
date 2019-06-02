@@ -13,7 +13,7 @@ public:
 	~Member();
 	string getID();
 	string getPassword();
-	virtual string getType();
-	virtual bool existTicket();
+	//virtual string getType();
+	//virtual bool existTicket();
 };
 

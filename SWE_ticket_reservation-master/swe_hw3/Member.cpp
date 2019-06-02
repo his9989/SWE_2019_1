@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Member.h"
-
+#include "memberManagement.h"
 
 Member::Member()
 {

@@ -3,7 +3,7 @@
 using namespace std;
 
 SignUp::SignUp() {}
-SignUp::SignUp(MemberManagement* mm) {
+SignUp::SignUp(MemberManagement *mm) {
 	memberManagement = new MemberManagement();
 	memberManagement = mm;
 }

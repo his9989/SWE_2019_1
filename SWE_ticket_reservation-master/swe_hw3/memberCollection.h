@@ -19,5 +19,6 @@ public:
 	Buyer* getBuyer(string);
 	Seller* getSeller(string);
 	bool match(string, string, string);
+	int num();//////wndkasjdkjaskdjaklsdjlkajsdlasd
 };
 #endif // 

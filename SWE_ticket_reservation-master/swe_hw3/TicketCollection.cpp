@@ -1,5 +1,6 @@
 #include"stdafx.h"
 #include "TicketCollection.h"
+#include "Ticket.h"
 
 TicketCollection::TicketCollection() {
 	// TODO Auto-generated constructor stub
@@ -17,3 +18,13 @@ vector<Ticket *> TicketCollection::getTickets() {
 void TicketCollection::add(Ticket * ticket) {
 	tickets.push_back(ticket);
 }
+
+bool TicketCollection::existTicket() {
+	if (tickets.size() > 0) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+

@@ -8,21 +8,14 @@ Seller::Seller(string id, string password, string name, string identificationNum
 	this->password = password;
 	this->name = name;
 	this->identificationNumber = identificationNumber;
-	registeredTickets = TicketCollection();
+	registeredTickets = TicketCollection::TicketCollection();
 }
 bool Seller::existTicket() {
-	/*if (registeredTickets == NULL){
-	return true;
-	}
-	else{
-	return false;
-	}
-	*/
-	return true;
+	return registeredTickets.existTicket();
 }
 
 string Seller::getType() {
-	return "Seller";
+	return "seller";
 }
 
 TicketCollection Seller::getRegisteredTickets()

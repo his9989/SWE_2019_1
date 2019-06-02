@@ -31,7 +31,7 @@ string HomeTeam::getCity() {
 }
 
 
-TicketCollection  HomeTeam::getTicketCollection() {
+TicketCollection HomeTeam::getTicketCollection() {
 	return ticketCollection;
 }
 

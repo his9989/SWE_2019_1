@@ -16,12 +16,12 @@ void MemberCollection::insertBuyer(Buyer *m) {
 string MemberCollection::getType(string id) {
 	for (vector<Seller*>::iterator it = sellers.begin(); it != sellers.end(); it++) {
 		if ((*it)->getID() == id) {
-			return "Seller";
+			return "seller";
 		}
 	}
 	for (vector<Buyer*>::iterator it = buyers.begin(); it != buyers.end(); it++) {
 		if ((*it)->getID() == id) {
-			return "Buyer";
+			return "buyer";
 		}
 	}
 
@@ -42,7 +42,7 @@ Buyer* MemberCollection::getBuyer(string id) {
 	}
 }
 bool MemberCollection::match(string type, string id, string password) {
-	if (type == "Seller") {
+	if (type == "seller") {
 		for (vector<Seller*>::iterator it = sellers.begin(); it != sellers.end(); it++) {
 			if ((*it)->getID() == id) {
 				if ((*it)->getPassword() == password) {
@@ -52,7 +52,7 @@ bool MemberCollection::match(string type, string id, string password) {
 		}
 		return false;
 	}
-	else if (type == "Buyer") {
+	else if (type == "buyer") {
 		for (vector<Buyer*>::iterator it = buyers.begin(); it != buyers.end(); it++) {
 			if ((*it)->getID() == id) {
 				if ((*it)->getPassword() == password) {
@@ -80,5 +80,9 @@ void MemberCollection::deleteBuyer(string id) {
 		}
 	}
 
+}
+
+int MemberCollection::num() {
+	return sellers.size();
 }
 

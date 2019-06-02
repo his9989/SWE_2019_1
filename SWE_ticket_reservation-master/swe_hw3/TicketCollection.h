@@ -11,5 +11,6 @@ public:
 	TicketCollection();
 	virtual ~TicketCollection();
 	void add(Ticket *);
+	bool existTicket();
 	vector<Ticket *> getTickets();
 };

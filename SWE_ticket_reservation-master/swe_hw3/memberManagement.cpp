@@ -1,23 +1,25 @@
 #include <iostream>
 #include <vector>
 #include <set>
-using namespace std;
 #include "memberManagement.h"
 #include "member.h"
 #include "seller.h"
 #include "buyer.h"
+using namespace std;
 
 MemberManagement::MemberManagement() {
 	member = new MemberCollection();
 }
+
 MemberManagement::~MemberManagement() {
 
 }
+
 void MemberManagement::createAccount(string type, string id, string password, string name, string identificationNumber) {
-	if (type == "Seller") {
+	if (type == "seller") {
 		member->insertSeller(new Seller(id, password, name, identificationNumber));
 	}
-	else if (type == "Buyer") {
+	else if (type == "buyer") {
 		member->insertBuyer(new Buyer(id, password, name, identificationNumber));
 	}
 	else {
@@ -26,8 +28,8 @@ void MemberManagement::createAccount(string type, string id, string password, st
 
 }
 bool MemberManagement::login(string id, string password) {
-	if (member->getType(id) == "Seller") {
-		if (member->match("Seller", id, password)) {
+	if (member->getType(id) == "seller") {
+		if (member->match("seller", id, password)) {
 			session.insert(id);
 			return true;
 		}
@@ -35,8 +37,8 @@ bool MemberManagement::login(string id, string password) {
 			return false;
 		}
 	}
-	else if (member->getType(id) == "Buyer") {
-		if (member->match("Buyer", id, password)) {
+	else if (member->getType(id) == "buyer") {
+		if (member->match("buyer", id, password)) {
 			session.insert(id);
 			return true;
 		}
@@ -57,7 +59,7 @@ void MemberManagement::logout(string id) {
 
 bool MemberManagement::deleteAccount(string id) {
 	
-	if ((member->getType(id) == "Seller")) {
+	if ((member->getType(id) == "seller")) {
 		Seller *s = member->getSeller(id);
 		if (s->existTicket())
 			return false;
@@ -71,7 +73,7 @@ bool MemberManagement::deleteAccount(string id) {
 			}
 		}
 	}
-	else if((member->getType(id) == "Buyer")){
+	else if((member->getType(id) == "buyer")){
 
 		member->deleteBuyer(id);
 		set<string>::iterator it;
@@ -84,8 +86,7 @@ bool MemberManagement::deleteAccount(string id) {
 	}
 	return true;
 }
-/*
+
 MemberCollection* MemberManagement::getMembers() {
 	return member;
 }
-*/

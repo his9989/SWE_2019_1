@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Buyer.h"
+#include "memberManagement.h"
 
 Buyer::Buyer()
 {
@@ -11,7 +12,7 @@ Buyer::Buyer(string id, string password, string name, string identificationNumbe
 	this->password = password;
 	this->name = name;
 	this->identificationNumber = identificationNumber;
-	bookedTickets = new TicketCollection();
+	bookedTickets = TicketCollection();
 }
 
 Buyer::~Buyer()
@@ -23,7 +24,7 @@ TicketCollection Buyer::getBookedTickets() {
 }
 
 string Buyer::getType() {
-	return "Buyer";
+	return "buyer";
 }
 
 /* virtual existTicket() 구현 필요 */
