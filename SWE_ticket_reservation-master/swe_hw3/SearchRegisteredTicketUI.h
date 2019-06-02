@@ -1,9 +1,8 @@
-#include <vector>
+#pragma once
+#include "stdafx.h"
 #include "SearchRegisteredTicket.h"
 #include "memberManagement.h"
 
-
-#pragma once
 
 class SearchRegisteredTicketUI
 {

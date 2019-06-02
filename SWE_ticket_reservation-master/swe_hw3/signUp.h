@@ -1,8 +1,6 @@
-#ifndef SIGN_UP_H
-#define SIGN_UP_H
-#include <string>
+#pragma once
+#include "stdafx.h"
 #include "memberManagement.h"
-using namespace std;
 
 class SignUp {
 private:
@@ -12,5 +10,3 @@ public:
 	SignUp(MemberManagement*);
 	void createAccount(string, string, string, string, string);
 };
-
-#endif

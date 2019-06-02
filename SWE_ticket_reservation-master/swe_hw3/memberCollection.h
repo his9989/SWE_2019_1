@@ -1,8 +1,7 @@
-#ifndef MEMBER_COLLECTION_H  
-#define MEMBER_COLLECTION_H
+#pragma once
+#include "stdafx.h"
 #include "seller.h"
 #include "buyer.h"
-#include <vector>
 
 class MemberCollection {
 private:
@@ -19,6 +18,4 @@ public:
 	Buyer* getBuyer(string);
 	Seller* getSeller(string);
 	bool match(string, string, string);
-	int num();//////wndkasjdkjaskdjaklsdjlkajsdlasd
 };
-#endif // 

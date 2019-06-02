@@ -1,5 +1,5 @@
-#ifndef DELETE_UI_H
-#define DELETE_UI_H
+#pragma once
+#include "stdafx.h"
 #include "delete.h"
 #include "memberManagement.h"
 
@@ -11,5 +11,3 @@ public:
 	DeleteUI(MemberManagement*);
 	bool deleteAccount(string);
 };
-
-#endif

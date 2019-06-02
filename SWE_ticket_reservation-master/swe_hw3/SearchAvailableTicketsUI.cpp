@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "SearchAvailableTicketsUI.h"
 #include "SearchAvailableTickets.h"
-//#include "DataSetter.h"
 #include "Buyer.h"
 #include "Ticket.h"
 #include "BookTicket.h"

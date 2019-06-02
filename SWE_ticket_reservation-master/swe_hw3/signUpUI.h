@@ -1,8 +1,6 @@
-#ifndef SIGN_UP_UI_H
-#define SIGN_UP_UI_H
-#include <string>
+#pragma once
+#include "stdafx.h"
 #include "signUp.h"
-using namespace std;
 
 class SignUpUI {
 private:
@@ -13,4 +11,3 @@ public:
 	void createAccount(string ,string, string, string, string);
 };
 
-#endif

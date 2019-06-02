@@ -1,7 +1,7 @@
-#ifndef LOG_IN_UI_H
-#define LOG_IN_UI_H
+#pragma once
+#include "stdafx.h"
 #include "login.h"
-#include <string>
+
 using namespace std;
 
 class LoginUI {
@@ -13,4 +13,3 @@ public:
 	LoginUI(MemberManagement*);
 	bool login(string, string);
 };
-#endif

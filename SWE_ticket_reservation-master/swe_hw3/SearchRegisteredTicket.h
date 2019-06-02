@@ -1,8 +1,8 @@
+#pragma once
 #include "TicketCollection.h"
 #include "Ticket.h"
 #include "Seller.h"
 
-#pragma once
 class SearchRegisteredTicket
 {
 private:

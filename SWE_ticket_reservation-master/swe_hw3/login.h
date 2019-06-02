@@ -1,7 +1,7 @@
-#ifndef LOG_IN_H
-#define LOG_IN_H
+#pragma once
+#include "stdafx.h"
 #include "memberManagement.h"
-#include <string>
+
 using namespace std;
 
 class Login {
@@ -12,5 +12,3 @@ public:
 	Login(MemberManagement*);
 	bool login(string, string);
 };
-
-#endif

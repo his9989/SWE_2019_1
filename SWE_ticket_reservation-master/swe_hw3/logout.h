@@ -1,6 +1,5 @@
-#ifndef LOG_OUT_H
-#define LOG_OUT_H
-#include <string>
+#pragma once
+#include "stdafx.h"
 #include "memberManagement.h"
 using namespace std;
 
@@ -12,6 +11,3 @@ public:
 	Logout(MemberManagement*);
 	void logout(string);
 };
-
-
-#endif

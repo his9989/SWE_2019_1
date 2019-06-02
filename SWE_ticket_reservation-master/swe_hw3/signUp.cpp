@@ -1,6 +1,5 @@
+#include "stdafx.h"
 #include "signUp.h"
-#include <string>
-using namespace std;
 
 SignUp::SignUp() {}
 SignUp::SignUp(MemberManagement *mm) {

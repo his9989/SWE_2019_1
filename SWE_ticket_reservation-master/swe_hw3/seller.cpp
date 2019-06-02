@@ -1,4 +1,6 @@
+#include "stdafx.h"
 #include "seller.h"
+
 Seller::Seller() {
 
 }
@@ -8,17 +10,17 @@ Seller::Seller(string id, string password, string name, string identificationNum
 	this->password = password;
 	this->name = name;
 	this->identificationNumber = identificationNumber;
-	registeredTickets = TicketCollection::TicketCollection();
+	registeredTickets = new TicketCollection();
 }
 bool Seller::existTicket() {
-	return registeredTickets.existTicket();
+	return registeredTickets->existTicket();
 }
 
 string Seller::getType() {
 	return "seller";
 }
 
-TicketCollection Seller::getRegisteredTickets()
+TicketCollection* Seller::getRegisteredTickets()
 {
 	return registeredTickets;
 }

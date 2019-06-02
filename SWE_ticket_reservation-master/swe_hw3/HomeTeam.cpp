@@ -31,14 +31,14 @@ string HomeTeam::getCity() {
 }
 
 
-TicketCollection HomeTeam::getTicketCollection() {
+TicketCollection * HomeTeam::getTicketCollection() {
 	return ticketCollection;
 }
 
-void HomeTeam::setTicketCollection(TicketCollection ticketCollection) {
+void HomeTeam::setTicketCollection(TicketCollection * ticketCollection) {
 	this->ticketCollection = ticketCollection;
 }
 
 vector<Ticket *> HomeTeam::listAvailableTickets() {
-	return ticketCollection.getTickets();
+	return ticketCollection->getTickets();
 }

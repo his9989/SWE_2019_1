@@ -5,11 +5,11 @@
 
 class Buyer : public Member
 {
-	TicketCollection bookedTickets;
+	TicketCollection *bookedTickets;
 public:
 	Buyer();
 	Buyer(string, string, string, string);
 	~Buyer();
-	TicketCollection getBookedTickets();
+	TicketCollection* getBookedTickets();
 	string getType();
 };

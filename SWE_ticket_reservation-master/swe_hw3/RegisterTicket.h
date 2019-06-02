@@ -1,6 +1,5 @@
 #pragma once
-
-#include <string>
+#include "stdafx.h"
 #include "TicketCollection.h"
 #include "Ticket.h"
 #include "Seller.h"
@@ -21,7 +20,7 @@ public:
 		string _awayTeam,
 		string _seat,
 		bool _limitedTimeAuction,
-		Seller& s);
+		Seller* s);
 	~RegisterTicket();
 };
 

@@ -1,4 +1,6 @@
+#include "stdafx.h"
 #include "logoutUI.h"
+
 LogoutUI::LogoutUI() {
 	logOut = new Logout();
 

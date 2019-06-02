@@ -14,7 +14,7 @@ SearchBookedTickets::~SearchBookedTickets()
 }
 
 vector<Ticket *> SearchBookedTickets::listBookedTickets(Buyer * buyer) {
-	return buyer->getBookedTickets().getTickets();
+	return buyer->getBookedTickets()->getTickets();
 }
 
 SearchBookedTickets * SearchBookedTickets::inst;

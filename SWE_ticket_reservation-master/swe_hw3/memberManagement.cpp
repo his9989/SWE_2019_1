@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <set>
+#include "stdafx.h"
 #include "memberManagement.h"
 #include "member.h"
 #include "seller.h"
@@ -53,6 +51,7 @@ void MemberManagement::logout(string id) {
 	for (it = session.begin(); it != session.end(); ++it) {
 		if (*it == id) {
 			session.erase(it);
+			break;
 		}
 	}
 }

@@ -1,5 +1,5 @@
+#include "stdafx.h"
 #include "signUpUI.h"
-#include <string>
 
 SignUpUI::SignUpUI() {}
 SignUpUI::SignUpUI(MemberManagement *mm) {

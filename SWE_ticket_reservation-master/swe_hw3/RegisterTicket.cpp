@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "RegisterTicket.h"
 #include "HomeTeamCollection.h"
 #include "HomeTeam.h"
@@ -25,14 +26,13 @@ void RegisterTicket::registerNewTicket(int _price,
 	string _awayTeam,
 	string _seat,
 	bool _limitedTimeAuction,
-	Seller &s)
+	Seller *s)
 {
 	Ticket *newTicket = new Ticket(_price, _matchDate, _homeTeam, _awayTeam, _seat, _limitedTimeAuction);
-	//cout << s->getID() << endl;
-	(s.getRegisteredTickets()).add(newTicket);
+	s->getRegisteredTickets()->add(newTicket);
 	// Seller에 있는 ticketcollection에 추가
 	HomeTeam * hometeam = HomeTeamCollection::getInstance()->getHomeTeamByName(_homeTeam);
-	hometeam->getTicketCollection().add(newTicket);
+	hometeam->getTicketCollection()->add(newTicket);
 	// HomeTeam에 있는 ticketcollection에 추가
 }
 

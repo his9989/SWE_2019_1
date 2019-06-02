@@ -12,14 +12,14 @@ Buyer::Buyer(string id, string password, string name, string identificationNumbe
 	this->password = password;
 	this->name = name;
 	this->identificationNumber = identificationNumber;
-	bookedTickets = TicketCollection();
+	bookedTickets = new TicketCollection();
 }
 
 Buyer::~Buyer()
 {
 }
 
-TicketCollection Buyer::getBookedTickets() {
+TicketCollection* Buyer::getBookedTickets() {
 	return bookedTickets;
 }
 

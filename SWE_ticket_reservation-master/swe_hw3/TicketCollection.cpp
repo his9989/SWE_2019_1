@@ -1,4 +1,4 @@
-#include"stdafx.h"
+#include "stdafx.h"
 #include "TicketCollection.h"
 #include "Ticket.h"
 

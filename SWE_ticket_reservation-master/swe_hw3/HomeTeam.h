@@ -9,7 +9,7 @@ class HomeTeam {
 private:
 	string name;
 	string city;
-	TicketCollection ticketCollection;
+	TicketCollection * ticketCollection;
 	//AuctionTicketCollection *auctionTicketCollection;
 
 public:
@@ -22,10 +22,10 @@ public:
 	vector<Ticket *> listAvailableTickets();
 	string getName();
 	string getCity();
-	TicketCollection getTicketCollection();
+	TicketCollection * getTicketCollection();
 	//AuctionTicketCollection* getAuctionTicketCollection();
 
 	// ADDED
-	void setTicketCollection(TicketCollection);
+	void setTicketCollection(TicketCollection *);
 	//void setAuctionTicketCollection(TicketCollection *);
 };

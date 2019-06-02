@@ -66,7 +66,7 @@ Ticket * Ticket::getTicket() {
 
 // [희망가격] [날짜-시간] [홈팀] [어웨이팀] [좌석위치]
 bool Ticket::bookTicket(Buyer * buyer) {
-	buyer->getBookedTickets().add(this);
+	buyer->getBookedTickets()->add(this);
 	timeSold = "1111"; // TODO : 현재시간으로 바꿔야 함
 	availability = false;
 	return true;

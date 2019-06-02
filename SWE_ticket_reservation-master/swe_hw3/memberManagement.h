@@ -1,12 +1,8 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <string>
+#pragma once
+#include "stdafx.h"
 #include "member.h"
 #include "memberCollection.h"
 using namespace std;
-#ifndef MEMBER_MANAGEMENT_H
-#define MEMBER_MANAGEMENT_H
 
 
 class MemberManagement {
@@ -24,7 +20,4 @@ public:
 	bool deleteAccount(string);
 	MemberCollection* getMembers();
 };
-
-#endif
-
 

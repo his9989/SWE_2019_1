@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "SearchRegisteredTicket.h"
 
 SearchRegisteredTicket* SearchRegisteredTicket::searchRegisteredTicketinst;
@@ -13,6 +14,6 @@ SearchRegisteredTicket* SearchRegisteredTicket::getInstance()
 
 vector<Ticket*> SearchRegisteredTicket::listTIcket(Seller* s)
 {
-	return s->getRegisteredTickets().getTickets();
+	return s->getRegisteredTickets()->getTickets();
 }
 

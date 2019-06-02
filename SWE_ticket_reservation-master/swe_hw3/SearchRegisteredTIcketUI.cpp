@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "SearchRegisteredTicketUI.h"
 #include "memberManagement.h"
 

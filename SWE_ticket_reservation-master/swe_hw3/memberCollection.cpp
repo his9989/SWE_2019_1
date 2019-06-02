@@ -1,8 +1,7 @@
+#include "stdafx.h"
 #include "member.h"
-#include <vector>
-#include <iostream>
 #include "memberCollection.h"
-using namespace std;
+
 MemberCollection::MemberCollection() {
 }
 void MemberCollection::insertSeller(Seller *m) {
@@ -82,7 +81,4 @@ void MemberCollection::deleteBuyer(string id) {
 
 }
 
-int MemberCollection::num() {
-	return sellers.size();
-}
 

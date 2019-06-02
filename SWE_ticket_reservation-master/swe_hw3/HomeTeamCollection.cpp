@@ -2,13 +2,12 @@
 #include "HomeTeamCollection.h"
 #include "HomeTeam.h"
 #include "TicketCollection.h"
-//#include "DataSetter.h"
 
 HomeTeamCollection::HomeTeamCollection() {
 	// »®∆¿ √ ±‚»≠
-	TicketCollection  tc1;// = new TicketCollection();
-	TicketCollection  tc2;// = new TicketCollection();
-	TicketCollection  tc3;// = new TicketCollection();
+	TicketCollection* tc1 = new TicketCollection();// = new TicketCollection();
+	TicketCollection* tc2 = new TicketCollection();// = new TicketCollection();
+	TicketCollection* tc3 = new TicketCollection();// = new TicketCollection();
 	HomeTeam* a = new HomeTeam("sk", "Seoul");
 	HomeTeam* b = new HomeTeam("lg", "Ulsan");
 	HomeTeam* c = new HomeTeam("doosan", "Gwangju");

@@ -1,4 +1,5 @@
 #pragma once
+#include "stdafx.h"
 #include "memberManagement.h"
 
 class Delete {

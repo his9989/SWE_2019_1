@@ -1,6 +1,5 @@
 #pragma once
-
-#include <string>
+#include "stdafx.h"
 #include "RegisterTicket.h"
 
 using namespace std;

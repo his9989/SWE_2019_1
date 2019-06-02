@@ -1,4 +1,6 @@
+#include "stdafx.h"
 #include "logout.h"
+
 Logout::Logout() {
 	memberManagement = new MemberManagement();
 }
