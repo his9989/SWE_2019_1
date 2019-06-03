@@ -25,8 +25,9 @@ void RegisterTicketUI::putTicketInfo(string _price,
 	string _seat,
 	bool _limitedTimeAuction,
 	string ID,
-	MemberManagement *mm){
+	MemberManagement *mm,
+	string currentTime){
 	Seller *s = (mm->getMembers())->getSeller(ID);
 	int price = atoi(_price.c_str());
-	RegisterTicket::getInstance()->registerNewTicket(price, _matchDate, _homeTeam, _awayTeam, _seat, _limitedTimeAuction, s);
+	RegisterTicket::getInstance()->registerNewTicket(price, _matchDate, _homeTeam, _awayTeam, _seat, _limitedTimeAuction, s, currentTime);
 }

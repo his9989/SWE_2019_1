@@ -20,12 +20,12 @@ private:
 public:
 	Ticket();
 	// TODO : registrationDate 현재시간 기준으로 생성자에서 해주어야 하는 것은 아닌지
-	// price / matchDate / homeTeam / awayTeam / seat / limitedTimeAuction
-	Ticket(int, string, string, string, string, bool);
+	// price / matchDate / homeTeam / awayTeam / seat / limitedTimeAuction / currentTime
+	Ticket(int, string, string, string, string, bool, string);
 
 	virtual ~Ticket();
 
-	bool bookTicket(Buyer *);
+	bool bookTicket(Buyer *, string);
 	Ticket * getTicket();
 
 	// getter / setter

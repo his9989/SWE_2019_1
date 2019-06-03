@@ -15,6 +15,15 @@ vector<Ticket *> TicketCollection::getTickets() {
 	return tickets;
 }
 
+void TicketCollection::deleteTicket(Ticket* ticket) {
+	int i = 0;
+	for (vector<Ticket*>::iterator it = tickets.begin(); it != tickets.end(); it++) {
+		if ((*it) == ticket) {
+			it = tickets.erase(it);
+		}
+	}
+}
+
 void TicketCollection::add(Ticket * ticket) {
 	tickets.push_back(ticket);
 }

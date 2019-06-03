@@ -14,6 +14,6 @@ public:
 	~SearchAvailableTicketsUI();
 	static SearchAvailableTicketsUI * getInstance() { return inst; }
 	vector<Ticket *> startInterface(Buyer *, string);
-	Ticket * buyTicketInterface(Buyer *, HomeTeam *, string, string, string);
+	Ticket * buyTicketInterface(Buyer *, HomeTeam *, string, string, string, string);
 };
 

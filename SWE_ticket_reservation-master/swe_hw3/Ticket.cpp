@@ -1,13 +1,14 @@
 #include "stdafx.h"
 #include "Ticket.h"
 #include "Buyer.h"
+#include "Timer.h"
 
 Ticket::Ticket() {
 	// TODO Auto-generated constructor stub
 }
 
 // price / matchDate / homeTeam / awayTeam / seat / limitedTimeAuction
-Ticket::Ticket(int price, string matchDate, string homeTeam, string awayTeam, string seat, bool limitedTimeAuction) {
+Ticket::Ticket(int price, string matchDate, string homeTeam, string awayTeam, string seat, bool limitedTimeAuction, string currentTime) {
 	this->price = price;
 	this->matchDate = matchDate;
 	this->limitedTimeAuction = limitedTimeAuction;
@@ -16,7 +17,7 @@ Ticket::Ticket(int price, string matchDate, string homeTeam, string awayTeam, st
 	this->seat = seat;
 	this->availability = true;
 	// TODO : 현재시간으로 바꿔야 함
-	this->registrationDate = "2019:05:01:18:00";
+	this->registrationDate = currentTime;
 }
 
 // getter / setter
@@ -65,9 +66,9 @@ Ticket * Ticket::getTicket() {
 }
 
 // [희망가격] [날짜-시간] [홈팀] [어웨이팀] [좌석위치]
-bool Ticket::bookTicket(Buyer * buyer) {
+bool Ticket::bookTicket(Buyer * buyer, string currentTime) {
 	buyer->getBookedTickets()->add(this);
-	timeSold = "1111"; // TODO : 현재시간으로 바꿔야 함
+	timeSold = currentTime; // TODO : 현재시간으로 바꿔야 함
 	availability = false;
 	return true;
 }

@@ -11,7 +11,7 @@ private:
 	BookTicket();
 	~BookTicket();
 public:
-	Ticket * bookTicket(HomeTeam *, Buyer *, map<string, string>);
+	Ticket * bookTicket(HomeTeam *, Buyer *, map<string, string>, string);
 	static BookTicket * getInstance() { return inst; }
 };
 

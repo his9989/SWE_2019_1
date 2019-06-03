@@ -20,7 +20,8 @@ public:
 		string _awayTeam,
 		string _seat,
 		bool _limitedTimeAuction,
-		Seller* s);
+		Seller* s,
+		string currentTime);
 	~RegisterTicket();
 };
 
