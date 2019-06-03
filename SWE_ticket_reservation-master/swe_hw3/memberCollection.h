@@ -17,5 +17,7 @@ public:
 	string getType(string id);
 	Buyer* getBuyer(string);
 	Seller* getSeller(string);
+	vector<Seller*> getAllSeller();
+	vector<Buyer*> getAllBuyer();
 	bool match(string, string, string);
 };

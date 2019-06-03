@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{5B4F63D1-7446-42F9-AC89-FAC186B51886}</ProjectGuid>
+    <ProjectGuid>{22B76774-9385-4AAA-BBC3-93DDD6948234}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>swehw3</RootNamespace>
+    <RootNamespace>SWhw3</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -84,138 +84,93 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="BookTicket.h" />
+    <ClInclude Include="AuctionTicket.h" />
+    <ClInclude Include="AuctionTicketCollection.h" />
     <ClInclude Include="Buyer.h" />
-    <ClInclude Include="delete.h" />
-    <ClInclude Include="deleteUI.h" />
+    <ClInclude Include="DataSetter.h" />
     <ClInclude Include="HomeTeam.h" />
     <ClInclude Include="HomeTeamCollection.h" />
-    <ClInclude Include="login.h" />
-    <ClInclude Include="loginUI.h" />
-    <ClInclude Include="logout.h" />
-    <ClInclude Include="logoutUI.h" />
     <ClInclude Include="Member.h" />
-    <ClInclude Include="memberCollection.h" />
-    <ClInclude Include="memberManagement.h" />
-    <ClInclude Include="RegisterTicket.h" />
-    <ClInclude Include="RegisterTicketUI.h" />
-    <ClInclude Include="SearchBookedTickets.h" />
-    <ClInclude Include="SearchBookedTicketsUI.h" />
-    <ClInclude Include="SearchAvailableTickets.h" />
-    <ClInclude Include="SearchAvailableTicketsUI.h" />
-    <ClInclude Include="SearchRegisteredTicket.h" />
-    <ClInclude Include="SearchRegisteredTicketUI.h" />
-    <ClInclude Include="seller.h" />
-    <ClInclude Include="signUp.h" />
-    <ClInclude Include="signUpUI.h" />
+    <ClInclude Include="ParticipateAuction.h" />
+    <ClInclude Include="RegisterAuctionTicket.h" />
+    <ClInclude Include="SearchAuctionTickets.h" />
+    <ClInclude Include="SearchAuctionTicketsUI.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Ticket.h" />
     <ClInclude Include="TicketCollection.h" />
-    <ClInclude Include="Timer.h" />
-    <ClInclude Include="TimerController.h" />
-    <ClInclude Include="TimerUI.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BookTicket.cpp" />
+    <ClCompile Include="AuctionTicket.cpp" />
+    <ClCompile Include="AuctionTicketCollection.cpp" />
     <ClCompile Include="Buyer.cpp" />
-    <ClCompile Include="delete.cpp" />
-    <ClCompile Include="deleteUI.cpp" />
+    <ClCompile Include="DataSetter.cpp" />
     <ClCompile Include="HomeTeam.cpp" />
     <ClCompile Include="HomeTeamCollection.cpp" />
-    <ClCompile Include="login.cpp" />
-    <ClCompile Include="loginUI.cpp" />
-    <ClCompile Include="logout.cpp" />
-    <ClCompile Include="logoutUI.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Member.cpp" />
-    <ClCompile Include="memberCollection.cpp" />
-    <ClCompile Include="memberManagement.cpp" />
-    <ClCompile Include="RegisterTicket.cpp" />
-    <ClCompile Include="RegisterTicketUI.cpp" />
-    <ClCompile Include="SearchBookedTickets.cpp" />
-    <ClCompile Include="SearchBookedTicketsUI.cpp" />
-    <ClCompile Include="SearchAvailableTickets.cpp" />
-    <ClCompile Include="SearchAvailableTicketsUI.cpp" />
-    <ClCompile Include="SearchRegisteredTicket.cpp" />
-    <ClCompile Include="SearchRegisteredTIcketUI.cpp" />
-    <ClCompile Include="seller.cpp" />
-    <ClCompile Include="signUp.cpp" />
-    <ClCompile Include="signUpUI.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="swe_hw3.cpp" />
+    <ClCompile Include="ParticipateAuction.cpp" />
+    <ClCompile Include="RegisterAuctionTicket.cpp" />
+    <ClCompile Include="SearchAuctionTickets.cpp" />
+    <ClCompile Include="SearchAuctionTicketsUI.cpp" />
+    <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Ticket.cpp" />
     <ClCompile Include="TicketCollection.cpp" />
-    <ClCompile Include="Timer.cpp" />
-    <ClCompile Include="TimerController.cpp" />
-    <ClCompile Include="TimerUI.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -40,6 +40,15 @@ Buyer* MemberCollection::getBuyer(string id) {
 		}
 	}
 }
+
+vector<Seller*> MemberCollection::getAllSeller() {
+	return sellers;
+}
+
+vector<Buyer*>MemberCollection::getAllBuyer() {
+	return buyers;
+}
+
 bool MemberCollection::match(string type, string id, string password) {
 	if (type == "seller") {
 		for (vector<Seller*>::iterator it = sellers.begin(); it != sellers.end(); it++) {
