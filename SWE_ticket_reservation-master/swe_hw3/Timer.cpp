@@ -43,12 +43,10 @@ void Timer::checkDeleteTicket(int year, int month, int day, int hour, int minute
 	for (int i = 0; i < homeTeams.size(); i++) {
 		vector<Ticket*> temp = homeTeams[i]->getTicketCollection()->getTickets();
 		for (vector<Ticket*>::iterator it = temp.begin(); it != temp.end(); it++) {
-			cout << (*it)->getRegistrationDate() << endl;
 			bool check = true;
 			check = compare(year, month, day, hour, minute, (*it)->getRegistrationDate());
-			if (check = false) {
-				//homeTeams[i]->getTicketCollection()->getTickets().erase(it);
-				cout << "delete" << endl;
+			if (check == false) {
+				homeTeams[i]->getTicketCollection()->deleteTicket(*it);
 			}
 		}
 	}
