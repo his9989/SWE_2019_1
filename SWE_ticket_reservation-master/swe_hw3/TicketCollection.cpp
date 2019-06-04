@@ -15,17 +15,28 @@ vector<Ticket *> TicketCollection::getTickets() {
 	return tickets;
 }
 
+void TicketCollection::add(Ticket * ticket) {
+	tickets.push_back(ticket);
+}
+
+
 void TicketCollection::deleteTicket(Ticket* ticket) {
-	int i = 0;
-	for (vector<Ticket*>::iterator it = tickets.begin(); it != tickets.end(); it++) {
+	for (vector<Ticket*>::iterator it = tickets.begin(); it != tickets.end();) {
 		if ((*it) == ticket) {
 			it = tickets.erase(it);
+		}
+		else {
+			it++;
 		}
 	}
 }
 
-void TicketCollection::add(Ticket * ticket) {
-	tickets.push_back(ticket);
+void TicketCollection::setAvailability(Ticket* ticket, bool availability) {
+	for (vector<Ticket*>::iterator it = tickets.begin(); it != tickets.end();it++) {
+		if ((*it) == ticket) {
+			(*it)->setAvailability(availability);
+		}
+	}
 }
 
 bool TicketCollection::existTicket() {

@@ -13,7 +13,7 @@ BookTicket::~BookTicket()
 {
 }
 
-Ticket * BookTicket::bookTicket(HomeTeam * homeTeam, Buyer * buyer, map<string,string> ticketInfo, string currentTime) {
+Ticket * BookTicket::bookTicket(HomeTeam * homeTeam, Buyer * buyer, map<string, string> ticketInfo, string currentTime) {
 	vector<Ticket *> homeTeamTickets = homeTeam->getTicketCollection()->getTickets();
 
 	// 홈팀 티켓중 정보와 일치하는 티켓 있으면 예약 고

@@ -147,8 +147,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AuctionTicket.h" />
+    <ClInclude Include="AuctionTicketCollection.h" />
     <ClInclude Include="BookTicket.h" />
     <ClInclude Include="Buyer.h" />
+    <ClInclude Include="CloseAuctionTicket.h" />
     <ClInclude Include="delete.h" />
     <ClInclude Include="deleteUI.h" />
     <ClInclude Include="HomeTeam.h" />
@@ -160,8 +163,12 @@
     <ClInclude Include="Member.h" />
     <ClInclude Include="memberCollection.h" />
     <ClInclude Include="memberManagement.h" />
+    <ClInclude Include="ParticipateAuction.h" />
+    <ClInclude Include="RegisterAuctionTicket.h" />
     <ClInclude Include="RegisterTicket.h" />
     <ClInclude Include="RegisterTicketUI.h" />
+    <ClInclude Include="SearchAuctionTickets.h" />
+    <ClInclude Include="SearchAuctionTicketsUI.h" />
     <ClInclude Include="SearchBookedTickets.h" />
     <ClInclude Include="SearchBookedTicketsUI.h" />
     <ClInclude Include="SearchAvailableTickets.h" />
@@ -180,8 +187,11 @@
     <ClInclude Include="TimerUI.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AuctionTicket.cpp" />
+    <ClCompile Include="AuctionTicketCollection.cpp" />
     <ClCompile Include="BookTicket.cpp" />
     <ClCompile Include="Buyer.cpp" />
+    <ClCompile Include="CloseAuctionTicket.cpp" />
     <ClCompile Include="delete.cpp" />
     <ClCompile Include="deleteUI.cpp" />
     <ClCompile Include="HomeTeam.cpp" />
@@ -193,8 +203,12 @@
     <ClCompile Include="Member.cpp" />
     <ClCompile Include="memberCollection.cpp" />
     <ClCompile Include="memberManagement.cpp" />
+    <ClCompile Include="ParticipateAuction.cpp" />
+    <ClCompile Include="RegisterAuctionTicket.cpp" />
     <ClCompile Include="RegisterTicket.cpp" />
     <ClCompile Include="RegisterTicketUI.cpp" />
+    <ClCompile Include="SearchAuctionTickets.cpp" />
+    <ClCompile Include="SearchAuctionTicketsUI.cpp" />
     <ClCompile Include="SearchBookedTickets.cpp" />
     <ClCompile Include="SearchBookedTicketsUI.cpp" />
     <ClCompile Include="SearchAvailableTickets.cpp" />

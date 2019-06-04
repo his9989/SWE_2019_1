@@ -8,7 +8,6 @@
 #include "Ticket.h"
 #include "AuctionTicket.h"
 #include "HomeTeam.h"
-#include <atltime.h>  //CTime
 #include <time.h>
 #include <iostream>
 #include <string>
@@ -56,16 +55,15 @@ string RegisterAuctionTicket::registerAuctionTickets(string currentTime) {
 	//AuctionTicket *auctionTicket;
 
 	int i = 0;
-	vector<Ticket*>::iterator it;
 	bool flag;
-	for (i = 0; i < homeTeams.size() ; ++i) {
+	for (i = 0; i < homeTeams.size(); i++) {
 
-		tickets = homeTeams.at(i)->getTicketCollection()->getTickets();
+		tickets = homeTeams[i]->getTicketCollection()->getTickets();
 
-		for (it = tickets.begin(); it != tickets.end();) {
+		for (vector<Ticket*>::iterator it = tickets.begin(); it != tickets.end();it++) {
 
 			flag = false;
-			string matchDate =(*it)->getMatchDate();
+			string matchDate = (*it)->getMatchDate();
 			vector<string> vMatchDate = split(matchDate, ':');
 			year = stoi(vMatchDate[0]);
 			month = stoi(vMatchDate[1]);
@@ -85,18 +83,16 @@ string RegisterAuctionTicket::registerAuctionTickets(string currentTime) {
 			double     d_diff;
 			d_diff = difftime(ticketDateT, currentDateT);		//double difftime( time_t timeEnd, time_t timeStart );
 
-			cout << "d_diff : " << d_diff << endl;
-
-			if (d_diff < (double)86400 && d_diff > 0) {		//24시간 이내이면
+			if (d_diff < (double)86400 && d_diff > (double)21600) {		//시간차가 6시간 이상 24시간 이내 (옥션 마감시간이 ticket의 matchDate - 6 시간이므로)
 				flag = true;
 			}
-			
+
 			if ((*it)->getLimitedTimeAuction() == true && flag == true) {
-				struct tm startTime = {};		//옥션 시작시작
+				struct tm startTime = {};		//옥션 시작시간
 				startTime.tm_year = year - 1900;
 				startTime.tm_mon = month - 1;
 				startTime.tm_mday = day;
-				startTime.tm_hour = hour - 24 ;		//경기시작 24시간 전
+				startTime.tm_hour = hour - 24;		//경기시작 24시간 전
 				startTime.tm_min = min;
 				time_t startTimeT = mktime(&startTime);
 
@@ -134,28 +130,13 @@ string RegisterAuctionTicket::registerAuctionTickets(string currentTime) {
 				closingTimeString.append(to_string(printDay)); closingTimeString.append(":");
 				closingTimeString.append(to_string(printHour)); closingTimeString.append(":");
 				closingTimeString.append(to_string(printMin));
-				//time(&closingTimeT);
-				//struct tm *tmpC = localtime(&closingTimeT);
-
-				//const char* fmt = "%Y:%m:%d:%k:%M";
-
-				/*
-				char startbuf[50];
-				char closingbuf[50];
-				strftime(startbuf, sizeof(startbuf), fmt,tmpS);		//time_t to format char			에러ㅔ러에러에러에러에러에러에러에러에러
-				strftime(closingbuf, sizeof(closingbuf), fmt, tmpC);
-				*/
-				//string startTimeString(startbuf);		//char to string
-				//string closingTimeString(closingbuf);
-
-				//string startTimeString = startTimeT.Format("%Y:%m:%d:%H:%M");
-				//string closingTimeString = closingTimeT.Format("%Y:%m:%d:%H:%M");
 
 				//옥션 티켓 생성
-				AuctionTicket *auctionTicket = new AuctionTicket((*it)->getPrice(), (*it)->getMatchDate(), (*it)->getHomeTeam(), (*it)->getAwayTeam(), (*it)->getSeat(), (*it)->getLimitedTimeAuction(),startTimeString,closingTimeString, (int)0.5*((*it)->getPrice()));
-				homeTeams.at(i)->getAuctionTicketCollection()->add(auctionTicket);		//옥션 티켓 추가
+				AuctionTicket *auctionTicket = new AuctionTicket((*it)->getPrice(), (*it)->getMatchDate(), (*it)->getHomeTeam(), (*it)->getAwayTeam(), (*it)->getSeat(), (*it)->getLimitedTimeAuction(),(*it)->getSellerID(),(*it)->getBuyerID(),currentTime , startTimeString, closingTimeString, (int)0.5*((*it)->getPrice()));
+				homeTeams[i]->getAuctionTicketCollection()->add(auctionTicket);		//옥션 티켓 추가
 
-				it=tickets.erase(it);	 //원래 있던 티켓 지우기
+				//it = homeTeams.at(i)->getTicketCollection()->getTickets().erase(it);	//원래 있던 티켓 지우기
+				homeTeams[i]->getTicketCollection()->deleteTicket(*it);
 
 				out.append(to_string(auctionTicket->getPrice())); out.append(" ");
 				out.append(auctionTicket->getMatchDate()); out.append(" ");
@@ -164,11 +145,8 @@ string RegisterAuctionTicket::registerAuctionTickets(string currentTime) {
 				out.append(auctionTicket->getSeat()); out.append(" ");
 				out.append(auctionTicket->getClosingTime());
 				out.append("\n");
-
-			} 
-			else {
-				++it;
 			}
+
 		}
 	}
 	return out;

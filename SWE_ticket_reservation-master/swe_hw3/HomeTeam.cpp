@@ -2,6 +2,7 @@
 #include "HomeTeam.h"
 #include "Ticket.h"
 #include "TicketCollection.h"
+#include "AuctionTicketCollection.h"
 
 HomeTeam::HomeTeam() {
 
@@ -35,8 +36,18 @@ TicketCollection * HomeTeam::getTicketCollection() {
 	return ticketCollection;
 }
 
+AuctionTicketCollection* HomeTeam::getAuctionTicketCollection() { 
+	return this->auctionTicketCollection; 
+}
+
 void HomeTeam::setTicketCollection(TicketCollection * ticketCollection) {
 	this->ticketCollection = ticketCollection;
+}
+
+void HomeTeam::setAuctionTicketCollection(AuctionTicketCollection * ticketCollection) {
+
+	this->auctionTicketCollection = ticketCollection;
+
 }
 
 vector<Ticket *> HomeTeam::listAvailableTickets() {

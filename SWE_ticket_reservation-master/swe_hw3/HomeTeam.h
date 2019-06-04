@@ -1,7 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include "TicketCollection.h"
-class HomeTeam;
+#include "AuctionTicketCollection.h"
 
 using namespace std;
 
@@ -10,7 +10,7 @@ private:
 	string name;
 	string city;
 	TicketCollection * ticketCollection;
-	//AuctionTicketCollection *auctionTicketCollection;
+	AuctionTicketCollection *auctionTicketCollection;
 
 public:
 
@@ -23,9 +23,9 @@ public:
 	string getName();
 	string getCity();
 	TicketCollection * getTicketCollection();
-	//AuctionTicketCollection* getAuctionTicketCollection();
+	AuctionTicketCollection* getAuctionTicketCollection();
 
 	// ADDED
 	void setTicketCollection(TicketCollection *);
-	//void setAuctionTicketCollection(TicketCollection *);
+	void setAuctionTicketCollection(AuctionTicketCollection *);
 };

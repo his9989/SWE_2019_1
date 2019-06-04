@@ -16,7 +16,7 @@ public:
 	~SearchAuctionTickets();
 	static SearchAuctionTickets *getInstance();
 	vector<AuctionTicket*> showHomeTeamAuctionTickets(string name);
-	
+
 	HomeTeamCollection* getHomeTeamCollection();
 };
 

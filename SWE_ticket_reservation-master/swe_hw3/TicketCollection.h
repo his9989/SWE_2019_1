@@ -13,5 +13,6 @@ public:
 	void add(Ticket *);
 	void deleteTicket(Ticket *);
 	bool existTicket();
+	void setAvailability(Ticket* ticket, bool availability);
 	vector<Ticket *> getTickets();
 };

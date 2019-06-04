@@ -126,6 +126,27 @@
     <ClInclude Include="Timer.h">
       <Filter>소스 파일\헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="SearchAuctionTickets.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SearchAuctionTicketsUI.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticipateAuction.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="RegisterAuctionTicket.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AuctionTicketCollection.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AuctionTicket.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CloseAuctionTicket.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -220,6 +241,27 @@
     </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>소스 파일\util</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchAuctionTickets.cpp">
+      <Filter>소스 파일\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchAuctionTicketsUI.cpp">
+      <Filter>소스 파일\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticipateAuction.cpp">
+      <Filter>소스 파일\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="RegisterAuctionTicket.cpp">
+      <Filter>소스 파일\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="AuctionTicketCollection.cpp">
+      <Filter>소스 파일\collection</Filter>
+    </ClCompile>
+    <ClCompile Include="AuctionTicket.cpp">
+      <Filter>소스 파일\domain</Filter>
+    </ClCompile>
+    <ClCompile Include="CloseAuctionTicket.cpp">
+      <Filter>소스 파일\controller</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

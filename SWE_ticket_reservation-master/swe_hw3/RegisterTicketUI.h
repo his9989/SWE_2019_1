@@ -18,8 +18,7 @@ public:
 		string _seat,
 		bool _limitedTimeAuction,
 		string ID,
-		MemberManagement *mm,
-		string currentTime);
+		MemberManagement *mm);
 	~RegisterTicketUI();
 };
 

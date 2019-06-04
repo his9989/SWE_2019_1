@@ -15,13 +15,14 @@ private:
 	string timeSold;
 	string registrationDate;
 	bool availability;
-
+	string sellerID;
+	string buyerID;
 
 public:
 	Ticket();
 	// TODO : registrationDate 현재시간 기준으로 생성자에서 해주어야 하는 것은 아닌지
-	// price / matchDate / homeTeam / awayTeam / seat / limitedTimeAuction / currentTime
-	Ticket(int, string, string, string, string, bool, string);
+	// price / matchDate / homeTeam / awayTeam / seat / limitedTimeAuction / sellerID / buyerID / currentTime
+	Ticket(int, string, string, string, string, bool,string,string,string);
 
 	virtual ~Ticket();
 
@@ -46,19 +47,18 @@ public:
 	string getRegistrationDate();
 
 	string getTimeSold();
+	
+	string getSellerID();
+
+	string getBuyerID();
+
+	void updateBuyerID(string buyerID);
+
+	void setAvailability(bool availability);
 
 	// algorithm sorting 시 커스텀 비교용 function 구현
-	static bool compare(Ticket * me, Ticket * other) {
-		string mmd = me->getMatchDate();
-		string omd = other->getMatchDate();
-		mmd.erase(remove(mmd.begin(), mmd.end(), ':'), mmd.end());
-		omd.erase(remove(omd.begin(), omd.end(), ':'), omd.end());
+	static bool compare(Ticket * me, Ticket * other);
 
-		if (atoi(mmd.c_str()) < atoi(omd.c_str())){
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
+	bool isSame(Ticket *one, Ticket *other);
+
 };

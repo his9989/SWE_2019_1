@@ -21,12 +21,12 @@ vector<Ticket *> SearchAvailableTicketsUI::startInterface(Buyer * buyer, string 
 	return SearchAvailableTickets::getInstance()->showAvailableTickets(homeTeam);
 }
 
-Ticket * SearchAvailableTicketsUI::buyTicketInterface(Buyer * buyer, HomeTeam * homeTeam, string matchDate, string awayTeam, string seat, string currentTime) {
+Ticket * SearchAvailableTicketsUI::buyTicketInterface(Buyer * buyer, HomeTeam * homeTeam, string matchDate, string awayTeam, string seat) {
 	map<string, string> ticketInfo;
 	ticketInfo.insert(make_pair("matchDate", matchDate));
 	ticketInfo.insert(make_pair("awayTeam", awayTeam));
 	ticketInfo.insert(make_pair("seat", seat));
-	return BookTicket::getInstance()->bookTicket(homeTeam, buyer, ticketInfo, currentTime);
+	return BookTicket::getInstance()->bookTicket(homeTeam, buyer, ticketInfo, matchDate);
 }
 
 SearchAvailableTicketsUI * SearchAvailableTicketsUI::inst;

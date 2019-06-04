@@ -8,13 +8,15 @@ class AuctionTicket;
 class AuctionTicketCollection {
 private:
 	vector<AuctionTicket*> tickets;
-	
+
 
 public:
 	AuctionTicketCollection();
 	virtual ~AuctionTicketCollection();
 	void add(AuctionTicket *ticket);
-
+	void deleteTicket(AuctionTicket *);
+	void updateBidAmount(AuctionTicket *, int);
+	void updateBuyerID(AuctionTicket *, string);
 	vector<AuctionTicket*> getTickets();
 	int getSize();
 };
