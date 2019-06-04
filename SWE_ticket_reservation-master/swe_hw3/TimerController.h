@@ -9,6 +9,7 @@ private:
 	int hour;
 	int minute;
 public:
+	// 생성자와 소멸자는 사용되지 않습니다.
 	TimerController();
 	~TimerController();
 	void checkToDeleteTicket(int, int, int, int, int, MemberManagement*);
