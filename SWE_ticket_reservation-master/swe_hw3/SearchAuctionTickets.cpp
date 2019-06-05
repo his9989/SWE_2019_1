@@ -17,6 +17,12 @@ SearchAuctionTickets::SearchAuctionTickets() {
 SearchAuctionTickets::~SearchAuctionTickets() {
 }
 
+// Function : SearchAuctionTickets* SearchAuctionTickets::getInstance() 
+// Description: 싱글턴 구현을 위한 함수 
+// Parameters :   None
+// Return Value :  SearchTickets에 대한 포인터
+// Created: 2019/06/29  
+// Author: 안재령
 SearchAuctionTickets* SearchAuctionTickets::getInstance() {
 	SearchAuctionTickets *newInstance;
 	if (instance == nullptr) {
@@ -26,6 +32,12 @@ SearchAuctionTickets* SearchAuctionTickets::getInstance() {
 	return newInstance;
 }
 
+// Function : vector<AuctionTicket*> SearchAuctionTickets::showHomeTeamAuctionTickets(string name)
+// Description: 홈팀의 이름과 시간을 받아 옥션티켓들을 검색하는함수
+// Parameters :  string name - 홈팀의 이름
+// Return Value :  vector<AuctionTicket*> 옥션티켓 포인터 벡터
+// Created: 2019/06/29  
+// Author: 안재령
 vector<AuctionTicket*> SearchAuctionTickets::showHomeTeamAuctionTickets(string name) {
 	vector<HomeTeam*> homeTeams = this->homeTeamCollection->getHomeTeams();
 

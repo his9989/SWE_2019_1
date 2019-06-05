@@ -4,13 +4,17 @@
 #include <atltime.h> //CTime
 #include "Ticket.h"
 
+
+// Class : AuctionTicket
+// Description:  AuctionTicket클래스이다. 옥션티켓의 정보를 가진 entity 클래스.
+// Created: 2019/06/29
+// Author: 안재령
+// mail: kn043143@naver.com
 class AuctionTicket : public Ticket {
 private:
 	string startTime;
 	string closingTime;
 	int bidAmount;
-
-	string buyerID;
 
 public:
 	AuctionTicket();

@@ -22,6 +22,12 @@ RegisterAuctionTicket::RegisterAuctionTicket() {
 RegisterAuctionTicket::~RegisterAuctionTicket() {
 }
 
+// Function : RegisterAuctionTicket* RegisterAuctionTicket::getInstance()
+// Description: 싱글턴 구현을 위한 함수 
+// Parameters :   None
+// Return Value :  RegisterAuctionTicket의 포인터
+// Created: 2019/06/29  
+// Author: 안재령
 RegisterAuctionTicket* RegisterAuctionTicket::getInstance() {
 	RegisterAuctionTicket *newInstance;
 	if (instance == nullptr) {
@@ -31,6 +37,12 @@ RegisterAuctionTicket* RegisterAuctionTicket::getInstance() {
 	return newInstance;
 }
 
+// Function : string RegisterAuctionTicket::registerAuctionTickets(string currentTime) 
+// Description: 현재시간과 티켓의 경기시간을 비교하여 옥션티켓 객체를 생성하는 함수
+// Parameters :  string currentTime - 현재 시간
+// Return Value :  string - 새로 옥션티켓으로 등록된 티켓들의 정보 문자열
+// Created: 2019/06/29
+// Author: 안재령
 vector<string> split(string str, char delimiter);
 string RegisterAuctionTicket::registerAuctionTickets(string currentTime) {
 	string out;
@@ -52,7 +64,6 @@ string RegisterAuctionTicket::registerAuctionTickets(string currentTime) {
 
 	vector<HomeTeam*> homeTeams = homeTeamCollection->getHomeTeams();
 	vector<Ticket*> tickets;
-	//AuctionTicket *auctionTicket;
 
 	int i = 0;
 	bool flag;

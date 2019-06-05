@@ -15,6 +15,12 @@ vector<Ticket *> TicketCollection::getTickets() {
 	return tickets;
 }
 
+// Function : void TicketCollection::add(Ticket * ticket)
+// Description: Ticket vector인 tickets에 새로운 ticket 인스턴스를 추가한다.
+// Parameters : Ticket * ticket
+// Return Value : 없음
+// Created: 2019/5/29 12:00 pm
+// Author: 김민섭
 void TicketCollection::add(Ticket * ticket) {
 	tickets.push_back(ticket);
 }

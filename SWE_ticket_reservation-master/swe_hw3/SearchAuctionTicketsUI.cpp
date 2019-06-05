@@ -17,6 +17,12 @@ SearchAuctionTicketsUI::~SearchAuctionTicketsUI() {
 
 }
 
+// Function : static SearchAuctionTicketsUI *getInstance()
+// Description: 싱글턴 구현을 위한 함수 
+// Parameters :   None
+// Return Value :  SearchTicketsUI에 대한 포인터
+// Created: 2019/06/29  
+// Author: 안재령
 SearchAuctionTicketsUI* SearchAuctionTicketsUI::getInstance() {
 	SearchAuctionTicketsUI *newInstance;
 	if (instance == nullptr) {
@@ -26,10 +32,14 @@ SearchAuctionTicketsUI* SearchAuctionTicketsUI::getInstance() {
 	return newInstance;
 }
 
-void SearchAuctionTicketsUI::startInterface(vector<HomeTeam*> homeTeams) {
 
-}
-
+// Function : string selectHomeTeam(string teamName, string currentTime)
+// Description: 홈팀의 이름과 시간을 받아 옥션티켓들을 검색하고 형식에 맞게 출력하는 함수 
+// Parameters :  string teamName - 홈팀의 이름
+//					string currentTime - 현재 시간
+// Return Value :  string 옥션 티켓들의 정보 문자열
+// Created: 2019/06/29  
+// Author: 안재령
 vector<string> split(string str, char delimiter);
 string SearchAuctionTicketsUI::selectHomeTeam(string teamName, string currentTime) {
 	this->teamName = teamName;
@@ -77,12 +87,6 @@ string SearchAuctionTicketsUI::selectHomeTeam(string teamName, string currentTim
 		int printHour = d_diff / 3600;
 		int printMin = (d_diff - printHour * 3600) / 60;
 
-		//struct tm remainS = {};
-		//remainS.tm_min = (int)difftime;
-		//time_t remainT = mktime(&remainS);
-
-
-
 		string remainTimeString;
 		remainTimeString.append(to_string(printHour)); remainTimeString.append(":");
 		remainTimeString.append(to_string(printMin));
@@ -103,6 +107,17 @@ string SearchAuctionTicketsUI::selectHomeTeam(string teamName, string currentTim
 	return out;
 }
 
+
+// Function : string selectParticipateAuction(string buyerID, string matchDate, string awayTeam, string seat, string bidAmount)
+// Description: 입찰 참여를 위해 원하는 티켓의 정보와 입찰금액을 입력받아 옥션 티켓에 입찰하고 입찰금액을 출력하는 함수
+// Parameters :  string buyerID - Buyer의 아이디
+//					string matchDate - 경기 날짜
+//					string awayTeam - AwayTeam명
+//					string seat - 자리
+//					string bidAmount - 입찰 금액
+// Return Value :  string 입찰 금액 문자열
+// Created: 2019/06/29  
+// Author: 안재령
 string SearchAuctionTicketsUI::selectParticipateAuction(string buyerID, string matchDate, string awayTeam, string seat, string bidAmount) {
 	int intBidAmount = stoi(bidAmount);
 	vector<AuctionTicket*> tickets = SearchAuctionTickets::getInstance()->showHomeTeamAuctionTickets(this->teamName);

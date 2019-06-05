@@ -1,6 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include "memberManagement.h"
+
 class TimerUI {
 public:
 	// 생성자와 소멸자는 사용되지 않습니다.

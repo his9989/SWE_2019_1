@@ -7,6 +7,11 @@
 #include "MemberManagement.h"
 using namespace std;
 
+// Class : RegisterTicket
+// Description: controll class로 받은 티켓의 정보로 티켓을 생성한다. 그리고 두개의 ticketcollection에 티켓을 추가한다.
+// Created: 2019/5/29 12:00 pm
+// Author: 김민섭
+// mail: minseob17@naver.com
 class RegisterTicket
 {
 private:

@@ -18,6 +18,12 @@ CloseAuctionTicket::CloseAuctionTicket() {
 CloseAuctionTicket::~CloseAuctionTicket() {
 }
 
+// Function : CloseAuctionTicket* CloseAuctionTicket::getInstance()
+// Description: 싱글턴 구현을 위한 함수 
+// Parameters :   None
+// Return Value :  CloseAuctionTicket의 포인터
+// Created: 2019/06/29  
+// Author: 안재령
 CloseAuctionTicket* CloseAuctionTicket::getInstance() {
 	CloseAuctionTicket *newInstance;
 	if (instance == nullptr) {
@@ -27,6 +33,13 @@ CloseAuctionTicket* CloseAuctionTicket::getInstance() {
 	return newInstance;
 }
 
+// Function : string CloseAuctionTicket::closeAuction(MemberManagement *mm, string currentTime)
+// Description: 현재 시간과 티켓의 경매 종료 시간을 비교하여 티켓을 낙찰시키거나 유찰시키는 함수.
+// Parameters :  MemberManagement *mm - 멤버 관리 클래스
+//					 string currentTime - 현재 시간
+// Return Value :  string 경매가 마감된 티켓의 정보 문자열
+// Created: 2019/06/29  
+// Author: 안재령
 vector<string> split(string str, char delimiter);
 string CloseAuctionTicket::closeAuction(MemberManagement *mm, string currentTime) {
 	string out;
