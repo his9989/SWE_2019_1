@@ -4,6 +4,11 @@
 #include "buyer.h"
 #include "memberManagement.h"
 
+// Class : Timer
+// Description: 입력받은 현재시간을 기준으로 1년을 초과하는 티켓이 존재하는지 확인하는 클래스 기능
+// Created: 2019/06/2 21:00 pm
+// Author: 한인수
+// mail: his9989@naver.com
 class Timer {
 public:
 	Timer();

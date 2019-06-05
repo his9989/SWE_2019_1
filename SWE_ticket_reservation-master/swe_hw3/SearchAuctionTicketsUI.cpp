@@ -88,12 +88,24 @@ string SearchAuctionTicketsUI::selectHomeTeam(string teamName, string currentTim
 		int printMin = (d_diff - printHour * 3600) / 60;
 
 		string remainTimeString;
-		remainTimeString.append(to_string(printHour)); remainTimeString.append(":");
-		remainTimeString.append(to_string(printMin));
 
-		cout << to_string(ticket->getPrice()) +" " + ticket->getMatchDate() + " " + ticket->getHomeTeam() + " " + ticket->getAwayTeam() + " " + ticket->getSeat() + " " + remainTimeString << endl;
+		if (printHour < 10) {
+			remainTimeString.append("0" + to_string(printHour));
+		}
+		else {
+			remainTimeString.append(to_string(printHour));
+		} 
+		remainTimeString.append(":");
 
-		out.append(to_string(ticket->getPrice())); out.append(" ");
+		if (printMin < 10) {
+			remainTimeString.append("0" + to_string(printMin));
+		}
+		else {
+			remainTimeString.append(to_string(printMin));
+		}
+
+		cout << ticket->getMatchDate() + " " + ticket->getHomeTeam() + " " + ticket->getAwayTeam() + " " + ticket->getSeat() + " " + remainTimeString << endl;
+
 		out.append(ticket->getMatchDate()); out.append(" ");
 		out.append(ticket->getHomeTeam()); out.append(" ");
 		out.append(ticket->getAwayTeam()); out.append(" ");

@@ -8,6 +8,14 @@
 TimerUI::TimerUI() {}
 TimerUI::~TimerUI() {}
 
+// Function : void TimerUI::checkTicket(string inputData, MemberManagement *mm)
+// Description : 매개변수로 받은 현재시간(inputData)을 각각 int타입의 year, month, day, hour, minute로 변환한다.
+//				그리고, 컨버팅한 [연, 월, 일, 시간, 분]과 MemberManagement 객체 포인터를 타이머컨트롤러에게 전달한다.
+// Parameters : string inputData, MemberManagement *mm
+// Return Value : None
+// Created: 2019/06/2 21:00 pm
+// Author: 한인수
+// mail: his9989@naver.com
 void TimerUI::checkTicket(string inputData, MemberManagement *mm) {
 	// inputData를 자료형에 맞게 변환
 	string year = inputData.substr(0, 4);

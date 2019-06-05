@@ -10,7 +10,13 @@
 Timer::Timer() {}
 Timer::~Timer() {}
 
-// 티켓의 매치 시간이 현재시간과 비교했을 때, 1년을 초과하면 삭제하기 위한 함수
+// Function : void Timer::checkDeleteTicket(int year, int month, int day, int hour, int minute, MemberManagement *mm)
+// Description : 티켓의 매치 시간이 현재시간과 비교했을 때, 1년을 초과하면 삭제하기 위한 함수
+// Parameters : int year, int month, int day, int hour, int minute, MemberManagement *mm
+// Return Value : None
+// Created: 2019/06/2 21:00 pm
+// Author: 한인수
+// mail: his9989@naver.com
 void Timer::checkDeleteTicket(int year, int month, int day, int hour, int minute, MemberManagement *mm) {
 	// Membermanagement에서 모든 Seller의 객체 포인터를 vector로 가져옴
 	vector<Seller*> sellers = mm->getMembers()->getAllSeller();
@@ -22,7 +28,7 @@ void Timer::checkDeleteTicket(int year, int month, int day, int hour, int minute
 		for (vector<Ticket*>::iterator itt = temp.begin(); itt != temp.end(); itt++) {
 			bool check = true;
 			// 각각의 Seller의 티켓 객체 포인터의 매치 시간을 가져와서 compare를 통해 비교
-			check = compare(year, month, day, hour, minute, (*itt)->getMatchDate());
+			check = compare(year, month, day, hour, minute, (*itt)->getRegistrationDate());
 			if (check == false) {
 				// 1년을 초과하는 경우
 				// 등록된 티켓을 관리하는 getRegisteredTickets()의 deleteTicket(Ticket*)를 호출
@@ -41,7 +47,7 @@ void Timer::checkDeleteTicket(int year, int month, int day, int hour, int minute
 		for (vector<Ticket*>::iterator itt = temp.begin(); itt != temp.end(); itt++) {
 			bool check = true;
 			// 각각의 Buyer의 티켓 객체 포인터의 매치 시간을 가져와서 compare를 통해 비교
-			check = compare(year, month, day, hour, minute, (*itt)->getMatchDate());
+			check = compare(year, month, day, hour, minute, (*itt)->getRegistrationDate());
 			if (check == false) {
 				// 1년을 초과하는 경우
 				// 등록된 티켓을 관리하는 getBookedTickets()의 deleteTicket(Ticket*)를 호출
@@ -70,13 +76,20 @@ void Timer::checkDeleteTicket(int year, int month, int day, int hour, int minute
 	}
 }
 
-// 티켓의 매치 시간과 현재 시간을 비교하기 위한 함수
+// Function : bool Timer::compare(int year, int month, int day, int hour, int minute, string MatchDate)
+// Description : 티켓의 매치 시간과 현재 시간을 비교하기 위한 함수
+// Parameters : int year, int month, int day, int hour, int minute, string MatchDate
+// Return Value : bool
+// Created: 2019/06/2 21:00 pm
+// Author: 한인수
+// mail: his9989@naver.com
 bool Timer::compare(int year, int month, int day, int hour, int minute, string MatchDate) {
 	int matchYear = stoi(MatchDate.substr(0, 4));
 	int matchMonth = stoi(MatchDate.substr(5, 7));
 	int matchDay = stoi(MatchDate.substr(8, 10));
 	int matchHour = stoi(MatchDate.substr(11, 13));
 	int matchMinute = stoi(MatchDate.substr(14, 17));
+	//cout << year << month << day << hour << minute << ", " << MatchDate << endl;
 	if (year > matchYear + 1) {
 		return false;
 	}

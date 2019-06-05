@@ -3,10 +3,10 @@
 class Ticket;
 
 // Class : TicketCollection
-// Description: collection class로 Ticket 인스턴스들을 저장하고 관리한다.
-// Created: 2019/5/29 12:00 pm
-// Author: 김민섭
-// mail: minseob17@naver.com
+// Description: 티켓들의 포인터를 담아놓은 콜렉션 클래스입니다
+// Created: 2019/5/28 20:30 pm
+// Author: 김도현
+// mail: donsdevko@gmail.com
 class TicketCollection {
 
 private:

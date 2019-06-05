@@ -1,18 +1,18 @@
 #pragma once
 #include "stdafx.h"
-#include "delete.h"
+#include "deleteAccount.h"
 #include "memberManagement.h"
 
-//Class : DeleteUI
+//Class : DeleteAccountUI
 //Description: This is Boundary Class of use case "Delete Account"
 //Created: 2019/06/02
 //Author: Nahyun Lim
 //mail: nahyun970128@gmail.com
-class DeleteUI {
+class DeleteAccountUI {
 private:
-	Delete * deletes;
+	DeleteAccount * deletes;
 public:
-	DeleteUI();
-	DeleteUI(MemberManagement*);
+	DeleteAccountUI();
+	DeleteAccountUI(MemberManagement*);
 	bool deleteAccount(string);
 };

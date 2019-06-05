@@ -33,19 +33,20 @@ RegisterTicket* RegisterTicket::getInstance()
 // Return Value : 없음
 // Created: 2019/5/29 12:00 pm
 // Author: 김민섭
-void RegisterTicket::registerNewTicket(int _price,
-	string _matchDate,
-	string _homeTeam,
-	string _awayTeam,
-	string _seat,
-	bool _limitedTimeAuction,
-	Seller *s)
+void RegisterTicket::registerNewTicket(int price,
+	string matchDate,
+	string homeTeam,
+	string awayTeam,
+	string seat,
+	bool limitedTimeAuction,
+	Seller *s,
+	string currentTime)
 {
 	string sellerID = s->getID();
-	Ticket *newTicket = new Ticket(_price, _matchDate, _homeTeam, _awayTeam, _seat, _limitedTimeAuction, sellerID, "", _matchDate);
+	Ticket *newTicket = new Ticket(price, matchDate, homeTeam, awayTeam, seat, limitedTimeAuction, sellerID, "", currentTime);
 	s->getRegisteredTickets()->add(newTicket);
 	// Seller에 있는 ticketcollection에 추가
-	HomeTeam * hometeam = HomeTeamCollection::getInstance()->getHomeTeamByName(_homeTeam);
+	HomeTeam * hometeam = HomeTeamCollection::getInstance()->getHomeTeamByName(homeTeam);
 	hometeam->getTicketCollection()->add(newTicket);
 	// HomeTeam에 있는 ticketcollection에 추가
 }

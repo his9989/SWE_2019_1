@@ -5,10 +5,10 @@ class Buyer;
 using namespace std;
 
 // Class : Ticket
-// Description: entity class로 ticket에 대한 정보를 저장하고 관리한다.
-// Created: 2019/5/29 12:00 pm
-// Author: 김민섭
-// mail: minseob17@naver.com
+// Description: Ticket 의 데이터를 담고있는 entity 클래스
+// Created: 2019/5/27 20:10 pm
+// Author: 김도현,...,
+// mail: donsdevko@gmail.com
 class Ticket {
 private: 
 	int price;

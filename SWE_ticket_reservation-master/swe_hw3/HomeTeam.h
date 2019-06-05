@@ -5,6 +5,11 @@
 
 using namespace std;
 
+// Class : HomeTeam
+// Description: 홈팀을 나타내는 entity class
+// Created: 2019/5/29 18:10 pm
+// Author: 김도현
+// mail: donsdevko@gmail.com
 class HomeTeam {
 private:
 	string name;

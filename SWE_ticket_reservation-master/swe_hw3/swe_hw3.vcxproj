@@ -152,8 +152,8 @@
     <ClInclude Include="BookTicket.h" />
     <ClInclude Include="Buyer.h" />
     <ClInclude Include="CloseAuctionTicket.h" />
-    <ClInclude Include="delete.h" />
-    <ClInclude Include="deleteUI.h" />
+    <ClInclude Include="deleteAccount.h" />
+    <ClInclude Include="deleteAccountUI.h" />
     <ClInclude Include="HomeTeam.h" />
     <ClInclude Include="HomeTeamCollection.h" />
     <ClInclude Include="login.h" />
@@ -192,8 +192,8 @@
     <ClCompile Include="BookTicket.cpp" />
     <ClCompile Include="Buyer.cpp" />
     <ClCompile Include="CloseAuctionTicket.cpp" />
-    <ClCompile Include="delete.cpp" />
-    <ClCompile Include="deleteUI.cpp" />
+    <ClCompile Include="deleteAccount.cpp" />
+    <ClCompile Include="deleteAccountUI.cpp" />
     <ClCompile Include="HomeTeam.cpp" />
     <ClCompile Include="HomeTeamCollection.cpp" />
     <ClCompile Include="login.cpp" />
