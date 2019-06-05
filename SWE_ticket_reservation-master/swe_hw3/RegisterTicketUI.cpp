@@ -27,7 +27,7 @@ RegisterTicketUI* RegisterTicketUI::getInstance()
 // Function : void RegisterTicketUI::putTicketInfo(string _price,string _matchDate,string _homeTeam,string _awayTeam,string _seat,bool _limitedTimeAuction,string ID,MemberManagement* mm, string currentTime)
 // Description: 파일로부터 입력된 티켓의 정보를 main에서 받아온다.
 // Description: 메인에서 받아온 membermanagement와 ID로 seller의 인스턴스를 받아온 후 티켓의 정보와 함께 RegisterTicket(control class)로 넘겨준다.
-// Parameters : string _price,string _matchDate,string _homeTeam,string _awayTeam,string _seat,bool _limitedTimeAuction,string ID,MemberManagement* mm
+// Parameters : string _price,string _matchDate,string _homeTeam,string _awayTeam,string _seat,bool _limitedTimeAuction,string ID,MemberManagement* mm, string currentTime
 // Return Value : 없음
 // Created: 2019/5/29 12:00 pm
 // Author: 김민섭

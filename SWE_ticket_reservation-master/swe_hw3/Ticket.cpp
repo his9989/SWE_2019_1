@@ -6,7 +6,7 @@ Ticket::Ticket() {
 	// TODO Auto-generated constructor stub
 }
 
-// price / matchDate / homeTeam / awayTeam / seat / limitedTimeAuction
+// price / matchDate / homeTeam / awayTeam / seat / limitedTimeAuction / currentTime
 Ticket::Ticket(int price, string matchDate, string homeTeam, string awayTeam, string seat, bool limitedTimeAuction, string sellerID, string buyerID, string currentTime) {
 	this->price = price;
 	this->matchDate = matchDate;

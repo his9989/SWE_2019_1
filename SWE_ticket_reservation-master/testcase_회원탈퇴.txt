@@ -1,0 +1,8 @@
+6 2
+1 1 aaa testpwd yoo 112233 seller
+1 1 bbb testpwd1 yoo 112233 buyer
+2 1 aaa testpwd
+1 2
+2 1 bbb testpwd1
+1 2
+7 1
