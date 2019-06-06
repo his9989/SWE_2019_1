@@ -104,7 +104,7 @@ string SearchAuctionTicketsUI::selectHomeTeam(string teamName, string currentTim
 			remainTimeString.append(to_string(printMin));
 		}
 
-		cout << ticket->getMatchDate() + " " + ticket->getHomeTeam() + " " + ticket->getAwayTeam() + " " + ticket->getSeat() + " " + remainTimeString << endl;
+		cout << "> " + ticket->getMatchDate() + " " + ticket->getHomeTeam() + " " + ticket->getAwayTeam() + " " + ticket->getSeat() + " " + remainTimeString << endl;
 
 		out.append(ticket->getMatchDate()); out.append(" ");
 		out.append(ticket->getHomeTeam()); out.append(" ");
